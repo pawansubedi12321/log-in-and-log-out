@@ -1,0 +1,14 @@
+{%include 'base.html'%}
+{%include 'navigation.html' %}
+<h1>Login Page</h1>
+{%block content%}
+<form action=""method='post'>
+     {% csrf_token%}
+
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" value=""><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" value=""><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+{% endblock content %}
